@@ -1,0 +1,34 @@
+{
+    "short_name":"Merchant App",
+    "name":"Merchant PWA",
+    "icons":[
+        {
+            "src":"/assets/images/logo.png",
+            "image":"image/png",
+            "sizes":"1024x1024"
+        },
+        {
+            "src":"/assets/images/logo_144.png",
+            "image":"image/png",
+            "sizes":"144x144"
+        },
+        {
+            "src":"/assets/images/logo_192.png",
+            "image":"image/png",
+            "sizes":"192x192",
+            "purpose": "maskable"
+        },
+        {
+            "src":"/assets/images/logo_512.png",
+            "image":"image/png",
+            "sizes":"512x512",
+            "purpose": "maskable"
+        }
+
+    ],
+    "start_url":".",
+    "display":"standalone",
+    "theme_color":"#000000",
+    "background_color":"#ffffff"
+
+}
