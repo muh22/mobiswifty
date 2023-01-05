@@ -43,7 +43,7 @@ import mobitvImage from "../../images/icon_images/mobitv-icon.png";
 import emailImage from "../../images/icon_images/emailsup.png";
 import faqImage from "../../images/icon_images/faqsupsup.png";
 import ticketImage from "../../images/icon_images/ticketsup.png";
-import chatImage from "../../images/icon_images/chat-menu.jpeg";
+import chatImage from "../../images/icon_images/chat-menu.png";
 import serviceImage from "../../images/icon_images/serviceicon.png";
 import joinusImage from "../../images/icon_images/join-us-ic.jpeg";
 import alertImage from "../../images/icon_images/alert-ic.jpeg";
