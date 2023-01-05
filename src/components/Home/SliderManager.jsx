@@ -20,7 +20,7 @@ function SliderManager() {
         <Carousel.Caption class="aligner">
           <p>
             <a href="/home" class="aligners">
-              <b>READ ME</b>
+              <b>README</b>
             </a>
           </p>
         </Carousel.Caption>
@@ -34,7 +34,7 @@ function SliderManager() {
         <Carousel.Caption class="aligner">
           <p>
             <a href="/home" class="aligners">
-              <b>READ ME</b>
+              <b>README</b>
             </a>
           </p>
         </Carousel.Caption>
@@ -48,7 +48,7 @@ function SliderManager() {
         <Carousel.Caption class="aligner">
           <p>
             <a href="/home" class="aligners">
-              <b>READ ME</b>
+              <b>README</b>
             </a>
           </p>
         </Carousel.Caption>
@@ -62,7 +62,7 @@ function SliderManager() {
         <Carousel.Caption class="aligner">
           <p>
             <a href="/home" class="aligners">
-              <b>READ ME</b>
+              <b>README</b>
             </a>
           </p>
         </Carousel.Caption>
@@ -76,7 +76,7 @@ function SliderManager() {
         <Carousel.Caption class="aligner">
           <p>
             <a href="/home" class="aligners">
-              <b>READ ME</b>
+              <b>README</b>
             </a>
           </p>
         </Carousel.Caption>
@@ -90,7 +90,7 @@ function SliderManager() {
         <Carousel.Caption class="aligner">
           <p>
             <a href="/home" class="aligners">
-              <b>READ ME</b>
+              <b>README</b>
             </a>
           </p>
         </Carousel.Caption>
@@ -105,7 +105,7 @@ function SliderManager() {
         <Carousel.Caption class="aligner">
           <p>
             <a href="/home" class="aligners">
-              <b>READ ME</b>
+              <b>README</b>
             </a>
           </p>
         </Carousel.Caption>
@@ -120,7 +120,7 @@ function SliderManager() {
         <Carousel.Caption class="aligner">
           <p>
             <a href="/home" class="aligners">
-              <b>READ ME</b>
+              <b>README</b>
             </a>
           </p>
         </Carousel.Caption>
