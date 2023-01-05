@@ -32,10 +32,13 @@ import successpayImage from "../../images/icon_images/successpay.png";
 import b2cImage from "../../images/icon_images/b2c-icon.png";
 import b2bImage from "../../images/icon_images/b2b-icon.png";
 import salesImage from "../../images/icon_images/sales-icon.png";
+import stockImage from "../../images/icon_images/stock-inventory.png";
+
 
 import mobishopImage from "../../images/icon_images/mobishop-icon.png";
 import mobiyellowImage from "../../images/icon_images/mobiyellow-icon.png";
 import mobicoupImage from "../../images/icon_images/mobicoupon-icon.png";
+import mobitvImage from "../../images/icon_images/mobitv-icon.png";
 
 import emailImage from "../../images/icon_images/emailsup.png";
 import faqImage from "../../images/icon_images/faqsupsup.png";
@@ -359,7 +362,7 @@ export default function HomePage() {
                                   <img src={b2cImage} />
                                 </i>
                                 <h3 class="text-body" style={{ fontSize: 10 }}>
-                                  <b>Consumer Sales</b>
+                                  {/* <b>Consumer Sales</b> */}
                                 </h3>
                               </span>
                             </Card>
@@ -379,7 +382,7 @@ export default function HomePage() {
                                 </i>
 
                                 <h3 class="text-body" style={{ fontSize: 10 }}>
-                                  <b>Business Sales</b>
+                                  {/* <b>Business Sales</b> */}
                                 </h3>
                               </span>
                             </Card>
@@ -399,7 +402,7 @@ export default function HomePage() {
                                   <img src={salesImage} />
                                 </i>
                                 <h3 class="text-body" style={{ fontSize: 10 }}>
-                                  <b>Sales Report</b>
+                                  {/* <b>Sales Report</b> */}
                                 </h3>
                               </span>
                             </Card>
@@ -414,7 +417,7 @@ export default function HomePage() {
                             <Card elevation={5}>
                               <span class="d-block text-10 text-primary mt-1 mb-1">
                                 <i>
-                                  {/* <img src={successpayImage} /> */}
+                                  <img src={stockImage} />
                                 </i>
                                 <h6 class="text-body" style={{ fontSize: 10 }}>
                                   <b></b>
@@ -555,7 +558,7 @@ export default function HomePage() {
                                   <img src={mobishopImage} />
                                 </i>
                                 <h3 class="text-body" style={{ fontSize: 10 }}>
-                                  <b>MobiShop</b>
+                                  {/* <b>MobiShop</b> */}
                                 </h3>
                               </span>
                             </Card>
@@ -575,7 +578,7 @@ export default function HomePage() {
                                 </i>
 
                                 <h3 class="text-body" style={{ fontSize: 10 }}>
-                                  <b>MobiYellow</b>
+                                  {/* <b>MobiYellow</b> */}
                                 </h3>
                               </span>
                             </Card>
@@ -592,10 +595,10 @@ export default function HomePage() {
                             <Card elevation={5}>
                               <span class="d-block text-10 text-primary mt-1 mb-1">
                                 <i>
-                                  <img src={mobicoupImage} />
+                                  <img src={mobitvImage} />
                                 </i>
                                 <h3 class="text-body" style={{ fontSize: 10 }}>
-                                  <b>MobiCoupon</b>
+                                  {/* <b>MobiCoupon</b> */}
                                 </h3>
                               </span>
                             </Card>
@@ -610,7 +613,7 @@ export default function HomePage() {
                             <Card elevation={5}>
                               <span class="d-block text-10 text-primary mt-1 mb-1">
                                 <i>
-                                  {/* <img src={successpayImage} /> */}
+                                  <img src={mobicoupImage} />
                                 </i>
                                 <h6 class="text-body" style={{ fontSize: 10 }}>
                                   <b></b>
