@@ -1,4 +1,5 @@
 import React, { useContext, useState, useMemo, useRef, useEffect } from "react";
+import { QRCode } from 'react-qrcode-logo';
 import {
   Container,
   Card,
@@ -27,19 +28,16 @@ import Footer from "./Footer";
 
 import logoImage from "../../images/logo/logo.jpeg";
 import loginImage from "../../images/icon_images/ic_login_circle.jpeg";
-
-import merchnatImage from "../../images/icon_images/merchnatscan.png";
-import smartIDImage from "../../images/icon_images/Smart-ID.png";
-import fraudalertImage from "../../images/icon_images/fraudalert.png";
-
+import serviceImage from "../../images/icon_images/serviceicon.png";
 import rraImage from "../../images/icon_images/rra.png";
 import rssbImage from "../../images/icon_images/rssb.png";
 import rnitImage from "../../images/icon_images/rnit.png";
 import ejohezaImage from "../../images/icon_images/ejoheza.png";
 import electricityImage from "../../images/icon_images/electricity.png";
-import mtnImage from "../../images/icon_images/mtn.png";
+import mtnImage from "../../images/icon_images/Untitled-2.jpg";
 import mobishuliImage from "../../images/icon_images/mobishuli.png";
 import wasacImage from "../../images/icon_images/wasac.png";
+
 
 //global inline styling
 const useStyles = makeStyles((theme) => ({
@@ -53,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-export default function MScan2Pay() {
+export default function MerchantQrCodeManager() {
 
     const classes = useStyles();
   return (
@@ -132,9 +130,6 @@ export default function MScan2Pay() {
        
 
         <div id="content">
-        <h6 style={{ textAlign: "center", fontSize: 24,color: "#ff9900", width: "100%" }}>
-                Payment Zone
-         </h6>
           <div
             class="owl-carousel owl-theme single-slideshow"
             data-autoplay="true"
@@ -143,47 +138,7 @@ export default function MScan2Pay() {
             data-nav="true"
             data-items="1"
           >
-            <Paper
-              elevation={0}
-              variant="outlined"
-              sx={{
-                p: 2,
-                margin: "auto",
-                maxWidth: 500,
-                flexGrow: 1,
-                backgroundColor: (theme) =>
-                  theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-              }}
-              className={classes.root}
-            >
-              <div class="container">
-                <div class="row">
-                  <Grid container spacing={1}>
-                    <Grid item xs={12}>
-                      <div class="col-sm-12 col-lg-12 mb-2 mb-lg-0">
-                        <div class="bg-light shadow-sm-0 rounded p-0 text-center">
-                          <Link to="#">
-                            <Card elevation={0}>
-                              {" "}
-                              <span class="d-block text-10 text-primary mt-1 mb-1">
-                               
-                                <Link to="/mobiqrcode"> <i>
-                                  {" "}
-                                  <img src={merchnatImage} />
-                                </i>
-                                </Link>
-                              </span>
-                            </Card>
-                          </Link>
-                        </div>
-                      </div>
-                    </Grid>
-                  </Grid>
-                </div>
-              </div>
-            </Paper>
-
-            <Paper
+            {/* <Paper
               elevation={0}
               variant="outlined"
               sx={{
@@ -208,7 +163,7 @@ export default function MScan2Pay() {
                               <span class="d-block text-10 text-primary mt-1 mb-1">
                                 <i>
                                   {" "}
-                                  <img src={smartIDImage} />
+                                  <img src={serviceImage} />
                                 </i>
                               </span>
                             </Card>
@@ -219,47 +174,64 @@ export default function MScan2Pay() {
                   </Grid>
                 </div>
               </div>
-            </Paper>
+            </Paper> */}
 
-            <Paper
-              elevation={0}
-              variant="outlined"
-              sx={{
-                p: 2,
-                margin: "auto",
-                maxWidth: 500,
-                flexGrow: 1,
-                backgroundColor: (theme) =>
-                  theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-              }}
-              className={classes.root}
-            >
+            <div class="container">
+              <h6 style={{ textAlign: "left", fontSize: 24,color: "#ff9900", width: "100%" }}>
+              MobiSwift Merchant QR Code
+              </h6>
+
+              <br />
               <div class="container">
                 <div class="row">
-                  <Grid container spacing={1}>
-                    <Grid item xs={12}>
-                      <div class="col-sm-12 col-lg-12 mb-2 mb-lg-0">
+                  {/* <div class="section-header">
+                    <h4
+                      style={{
+                        backgroundColor: "#fbe5d6",
+                        width: "100%",
+                        fontSize: 15,
+                      }}
+                    >
+                      
+                    </h4>
+                  </div> */}
+
+                  <Grid
+                    container
+                    rowSpacing={1}
+                    columnSpacing={{ xs: 1, sm: 1, md: 2, lg: 2, xl: 2 }}
+                  >
+                    <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+                      <div class="col-sm-8 col-md-6 col-lg-5 mb-2 mb-lg-0">
                         <div class="bg-light shadow-sm-0 rounded p-0 text-center">
                           <Link to="#">
-                            <Card elevation={0}>
-                              {" "}
-                              <span class="d-block text-10 text-primary mt-1 mb-1">
-                                <i>
-                                  {" "}
-                                  <img src={fraudalertImage} />
-                                </i>
-                              </span>
-                            </Card>
+                          <QRCode value="00020101021129360032e1043f0e7e2748a3b50285bba02cda99520410005802RW5916mobiswift@1808696006KIGALI64360002EN0116mobiswift@1808690206KIGALI5303646620711030006304585C" size={200}  logoImage={mtnImage} logoWidth={40} logoHeight={40}/><br />
+
+                            {/*<h3 class="text-body text-1">RRA</h3>*/}
                           </Link>
                         </div>
                       </div>
                     </Grid>
+                    
                   </Grid>
                 </div>
               </div>
-            </Paper>
+             
 
-           
+             
+
+              <div class="transaction-section pb-15">
+                <br />
+                <div class="section-header">
+                  <h2></h2>
+                  <div class="view-all">
+                    <Link to="#"></Link>
+                  </div>
+                </div>
+
+              
+              </div>
+            </div>
           </div>
 
           <BottomMenu />
