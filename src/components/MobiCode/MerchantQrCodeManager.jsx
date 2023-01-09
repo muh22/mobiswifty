@@ -180,8 +180,20 @@ export default function MerchantQrCodeManager() {
               <h6 style={{ textAlign: "left", fontSize: 24,color: "#ff9900", width: "100%" }}>
               MobiSwift Merchant QR Code
               </h6>
-
               <br />
+              <h6 style={{ textAlign: "left", fontSize: 18, width: "100%" }}>
+               Merchant-ID :154456
+              </h6>
+              <h6 style={{ textAlign: "left", fontSize: 18, width: "100%" }}>
+               Name :BigSave
+              </h6>
+              <h6 style={{ textAlign: "left", fontSize: 18, width: "100%" }}>
+               Mobile :0788603800
+              </h6>
+              <h6 style={{ textAlign: "left", fontSize: 18, width: "100%" }}>
+               Location:Kigali
+              </h6>
+              <br /> 
               <div class="container">
                 <div class="row">
                   {/* <div class="section-header">
@@ -205,13 +217,19 @@ export default function MerchantQrCodeManager() {
                       <div class="col-sm-8 col-md-6 col-lg-5 mb-2 mb-lg-0">
                         <div class="bg-light shadow-sm-0 rounded p-0 text-center">
                           <Link to="#">
-                          <QRCode value="00020101021129360032e1043f0e7e2748a3b50285bba02cda99520410005802RW5916mobiswift@1808696006KIGALI64360002EN0116mobiswift@1808690206KIGALI5303646620711030006304585C" size={200}  logoImage={mtnImage} logoWidth={40} logoHeight={40}/><br />
+                          <QRCode value="00020101021129360032e1043f0e7e2748a3b50285bba02cda99520410005802RW5916mobiswift@1808696006KIGALI64360002EN0116mobiswift@1808690206KIGALI5303646620711030006304585C" size={250}  logoImage={mtnImage} logoWidth={45} logoHeight={45}/><br />
 
-                            {/*<h3 class="text-body text-1">RRA</h3>*/}
+                            {/* <h3 class="text-body text-1">Make sure when scan the Qr Code the Merchant name appear</h3> */}
                           </Link>
                         </div>
                       </div>
                     </Grid>
+                    <h6 style={{ textAlign: "left", fontSize: 18,color: "#FF0000", width: "100%" }}>
+                    Make sure when scan the Qr Code
+                   </h6>
+                   <h6 style={{ textAlign: "left", fontSize: 18,color: "#FF0000", width: "100%" }}>
+                    The Merchant name appear  
+                   </h6>
                     
                   </Grid>
                 </div>
