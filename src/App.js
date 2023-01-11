@@ -3,6 +3,7 @@ import HomePage from './components/Home/HomePage';
 import ServicePage from './components/Services/ServicePage';
 import MScan2Pay from './components/Services/MScan2Pay';
 import MerchantQrCodeManager from './components/MobiCode/MerchantQrCodeManager';
+import MobiswiftScanner from "./components/MerchantScanner/MobiswiftScanner";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/services" element={<ServicePage/>}></Route>
         <Route path="/mscan2Pay" element={<MScan2Pay/>}></Route>
         <Route path="/mobiqrcode" element={<MerchantQrCodeManager/>}></Route>
+        <Route path="/mobiswiftScanner" element={<MobiswiftScanner/>}></Route>
         {
         /*<Route path="/signin" element={<SigninPage />}></Route>
         <Route path="/signup" element={<SignupPage />}></Route>*/}

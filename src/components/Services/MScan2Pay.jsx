@@ -206,10 +206,12 @@ export default function MScan2Pay() {
                             <Card elevation={0}>
                               {" "}
                               <span class="d-block text-10 text-primary mt-1 mb-1">
+                              <Link to="/mobiswiftScanner">
                                 <i>
                                   {" "}
                                   <img src={smartIDImage} />
                                 </i>
+                                </Link>
                               </span>
                             </Card>
                           </Link>
