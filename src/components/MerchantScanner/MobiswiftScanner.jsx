@@ -219,7 +219,7 @@ function MobiswiftScanner() {
               <div class="form-group pb-10">
                 <label></label>
                 <Container className={classes.conatiner}>
-                  <div style={{ justifyItems: "center" }}>
+                  {/* <div style={{ justifyItems: "center" }}>
                     <h6 className={classes.title}> {"QR CODE SCAN TO PAY "}</h6>
                     <h6 style={{ fontSize: 10 }}>
                       To make a QR code payment, you have to scan the code
@@ -231,7 +231,7 @@ function MobiswiftScanner() {
                       </ul>
                     </h6>
                     <hr style={{ color: "red", size: 20 }} width="100%" />
-                  </div>
+                  </div> */}
                   <Card
                     style={{
                       minHeight: "75vh",
