@@ -252,7 +252,8 @@ export default function HomePage() {
                               <span class="d-block text-10 text-primary mt-1 mb-1">
                               <Link to="/mscan2Pay">
                                 <i>
-                                  <img src={scanToPayImage}/>
+                                  <img src={scanToPayImage}
+                                  />
                                 </i>
                                 </Link>
                                 <h3 class="text-body" style={{ fontSize: 10 }}>

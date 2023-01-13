@@ -15,16 +15,17 @@ import {
   Button,
 } from "@material-ui/core";
 
-import {QrReader} from "react-qr-reader";
+import QrReader from "react-qr-reader";
 import { Navigate, Link, useNavigate } from "react-router-dom";
-
-import logoImage from "../../images/logo/logo.jpeg";
-import loginImage from "../../images/icon_images/ic_login_circle.jpeg";
-
-//import searchMerchantQrCode from "../api/MerchantSearchController";
-
 import { toast } from "react-toastify";
 import BottomMenu from "./BottomMenu";
+import logoImage from "../../images/logo/logo.jpeg";
+import loginImage from "../../images/icon_images/ic_login_circle.jpeg";
+export let qrcodeString=[];
+
+
+
+
 
 function MobiswiftScanner() {
 
@@ -64,10 +65,12 @@ function MobiswiftScanner() {
     if (result) {
       
       if (result.length === 162) {
-        console.log("Calling Merchant Details: Scanning Result:"+result);
+        console.log("Calling Client Details: Scanning Result:"+result);
+        qrcodeString.push(result)
+        navigate('/client_Info');
 
         //await searchMerchantDetails("00020101021129360032e1043f0e7e2748a3b50285bba02cda99520410005802RW5916mobiswift@1808696006KIGALI64360002EN0116mobiswift@1808690206KIGALI5303646620711030006304585C");
-        //navigate('/merchant-payment',{state:result});
+        //navigate('/client_Info',{state:result});
       } else {
         console.log("Logging Empty QR String");
       }
@@ -76,66 +79,66 @@ function MobiswiftScanner() {
 
 
 
-  // Network Request Handling : Merchant information Look-Up
-  /*
-  async function searchMerchantDetails(scanResultWebCam) {
+  // Network Request Handling : Client information Look-Up
+
+  //async function searchClientDetails(scanResultWebCam) {
     //e.preventDefault();
-    if (scanResultWebCam != null) {
-      console.log("Logging QR String #");
-      toast.dismiss();
-      const id = toast.loading("Processing QR code identification..");
+   // if (scanResultWebCam != null) {
+    //  console.log("Logging QR String #");
+     // toast.dismiss();
+     // const id = toast.loading("Processing QR code identification..");
 
-      try {
-        const sampleQrCodePayload = {
-          qrcodeString: scanResultWebCam,
-        };
+    //   try {
+    //     const sampleQrCodePayload = {
+    //       qrcodeString: scanResultWebCam,
+    //     };
 
-        const response = await searchMerchantQrCode(sampleQrCodePayload);
+        // const response = await searchMerchantQrCode(sampleQrCodePayload);
 
-        setTimeout(
-          () => {
-            if (response.responseCode === "100") {
-              setSearchMerchantDetailMode(false);
-              console.log("Merchant Details:", response);
-              toast.dismiss();
-              navigate("/merchant-payment", { state: response });
-            } else {
-              toast.update(id, {
-                render: response.responseDescription,
-                type: "info",
-                isLoading: false,
-                closeButton: null,
-              });
-            }
-          },
+        // setTimeout(
+        //   () => {
+        //     if (response.responseCode === "100") {
+        //       setSearchMerchantDetailMode(false);
+        //       console.log("Merchant Details:", response);
+        //       toast.dismiss();
+        //       navigate("/merchant-payment", { state: response });
+        //     } else {
+        //       toast.update(id, {
+        //         render: response.responseDescription,
+        //         type: "info",
+        //         isLoading: false,
+        //         closeButton: null,
+        //       });
+        //     }
+        //   },
 
-          2200
-        );
-      } catch (err) {
-        console.log("Error Handling QR Code:" + err?.response);
-        toast.update(id, {
-          render:
-            "Dear customer we are unable to process your request now. Try again later.",
-          type: "info",
-          isLoading: false,
-          closeButton: null,
-        });
+        //   2200
+        // );
+    //   } catch (err) {
+    //     console.log("Error Handling QR Code:" + err?.response);
+    //     toast.update(id, {
+    //       render:
+    //         "Dear customer we are unable to process your request now. Try again later.",
+    //       type: "info",
+    //       isLoading: false,
+    //       closeButton: null,
+    //     });
 
-        if (!err?.response) {
-          //setErrMsg('Sample Error Response');
-          //toast.update(id, {render:"Dear customer we are unable to process your request now. Try again later.", type: "info", isLoading: false,closeButton: null});
-        } else if (err.response?.status === 409) {
-          //setErrMsg('Sample Error Response');
-          //toast.update(id, {render:"Dear customer we are unable to process your request now. Try again later.", type: "info", isLoading: false,closeButton: null});
-        } else {
-          //setErrMsg('Sample Error Response')
-          //toast.update(id, {render:"Dear customer we are unable to process your request now. Try again later.", type: "info", isLoading: false,closeButton: null});
-        }
-        //errRef.current.focus();
-        //errRef.current.focus();
-      }
-    }
-  }*/
+    //     if (!err?.response) {
+    //       //setErrMsg('Sample Error Response');
+    //       //toast.update(id, {render:"Dear customer we are unable to process your request now. Try again later.", type: "info", isLoading: false,closeButton: null});
+    //     } else if (err.response?.status === 409) {
+    //       //setErrMsg('Sample Error Response');
+    //       //toast.update(id, {render:"Dear customer we are unable to process your request now. Try again later.", type: "info", isLoading: false,closeButton: null});
+    //     } else {
+    //       //setErrMsg('Sample Error Response')
+    //       //toast.update(id, {render:"Dear customer we are unable to process your request now. Try again later.", type: "info", isLoading: false,closeButton: null});
+    //     }
+    //     //errRef.current.focus();
+    //     //errRef.current.focus();
+    //   }
+   // }
+  //}
 
   return (
     <div id="main-wrapper">
