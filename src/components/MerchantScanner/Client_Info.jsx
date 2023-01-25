@@ -38,7 +38,9 @@ function Client_Info() {
   
 
     const [response, setResponse] = useState(null);
-    const [img , setImg]=useState("https://testbox.mobicash.rw/CoreBank/test_box/api/images/content/GSDFJbFJUbjq1BONPjIrwxjMCUya5ig6qmMgS4fVYov9djHX30sdir02qhj0NRMy_265x190.png");
+    const [responseError, setResponseError] = useState(null);
+
+    //const [img , setImg]=useState("https://testbox.mobicash.rw/CoreBank/test_box/api/images/content/GSDFJbFJUbjq1BONPjIrwxjMCUya5ig6qmMgS4fVYov9djHX30sdir02qhj0NRMy_265x190.png");
     const fetchQuotes = async () => {
       try {
         const res = await axios.get("https://dev.mobivat.com/mobitax-vsdc/mobivat/api/emvqr/decoder?", {
@@ -48,6 +50,19 @@ function Client_Info() {
           params: { qrcodeString:qrcodeString[0]},
         });
         setResponse(res.data.data);
+        setResponseError(res.data);
+
+        const statusCode =responseError.responseCode;
+        if(statusCode=="101")
+         {
+          console.log(responseError.codeDescription);
+          <script>
+          function myFunction() {
+          alert(responseError.codeDescription)
+           }
+        </script>
+         
+         }
       } catch (err) {
         console.log(err);
       }

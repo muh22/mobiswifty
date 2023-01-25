@@ -1,4 +1,6 @@
 import React, { useContext, useState, useMemo, useRef, useEffect } from "react";
+import FirebaseNotification from "../Notifications/FirebaseNotification";
+import NotificationSound from "../../images/audio/notificationsound.wav";
 import {
   BrowserRouter as Router,
   Switch,
@@ -21,6 +23,8 @@ import {
   TextField,
   Button,
 } from "@material-ui/core";
+// import FirebaseNotification from "../Notification/FirebaseNotification";
+
 import { Paper, Box, Typography, ButtonBase } from "@material-ui/core";
 import SliderManager from "./SliderManager";
 import $ from "jquery";
@@ -52,6 +56,8 @@ import loginImage from "../../images/icon_images/ic_login_circle.jpeg";
 import BottomMenu from "./BottomMenu";
 import Footer from "./Footer";
 
+
+
 //global inline styling
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -64,10 +70,12 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+
 export default function HomePage() {
   //variable declaration
   const [showChat, setShowChat] = useState(false);
   const classes = useStyles();
+  const audioPlayer = useRef(null);
   //scripting block
   useEffect(() => {
     //alert($("#input").val())
@@ -202,8 +210,6 @@ export default function HomePage() {
             </div>
           </div>
         </header>
-
-       
 
         <div id="content">
           <div
@@ -416,10 +422,10 @@ export default function HomePage() {
                     <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
                       <div class="col-sm-8 col-md-6 col-lg-5">
                         <div class="bg-light shadow-sm-0 rounded p-0  text-center">
-                          <Link to="#">
+                          <Link to="/category">
                             <Card elevation={5}>
                               <span class="d-block text-10 text-primary mt-1 mb-1">
-                                <i>
+                               <i>
                                   <img src={stockImage} />
                                 </i>
                                 <h6 class="text-body" style={{ fontSize: 10 }}>
@@ -786,14 +792,15 @@ export default function HomePage() {
 
           <BottomMenu />
         </div>
-
+        <FirebaseNotification/>
+       {/* <NotificationSoundManager/> */}
         <Footer />
       </div>
 
       {
         //<!-- Document Wrapper end --> <!-- Back to Top
       }
-
+        <audio ref={audioPlayer} src={NotificationSound} />
       <a
         id="back-to-top"
         data-toggle="tooltip"

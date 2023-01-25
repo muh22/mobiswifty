@@ -6,7 +6,9 @@ import MerchantQrCodeManager from './components/MobiCode/MerchantQrCodeManager';
 import MobiswiftScanner from "./components/MerchantScanner/MobiswiftScanner";
 import MSwiftScanner from "./components/MerchantScanner/MSwiftScanner";
 import Client_Info from "./components/MerchantScanner/Client_Info";
-
+import NotificationSoundManager from "./components/Notifications/NotificationSoundManager";
+import CategoryManager from "./components/Marketplace/CategoryManager";
+import CategoryPage from "./components/Marketplace/CategoryPage";
 
 function App() {
   return (
@@ -21,6 +23,9 @@ function App() {
         <Route path="/mobiqrcode" element={<MerchantQrCodeManager/>}></Route>
         <Route path="/mobiswiftScanner" element={<MobiswiftScanner/>}></Route>
         <Route path="/client_Info" element={<Client_Info/>}></Route>
+        <Route path="/test_sound" element={<NotificationSoundManager/>}></Route>
+        <Route path="/categoryManager" element={<CategoryManager/>}></Route>
+        <Route path="/category" element={<CategoryPage/>}></Route>
         
         {
         /*<Route path="/signin" element={<SigninPage />}></Route>
