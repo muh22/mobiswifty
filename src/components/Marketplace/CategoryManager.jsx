@@ -298,13 +298,13 @@ export default function CategoryManager() {
       //const [img , setImg]=useState("https://testbox.mobicash.rw/CoreBank/test_box/api/images/content/GSDFJbFJUbjq1BONPjIrwxjMCUya5ig6qmMgS4fVYov9djHX30sdir02qhj0NRMy_265x190.png");
       const fetchQuotes = async () => {
         try {
-          const res = await axios.get("https://dev.mobivat.com/mobitax-vsdc/mobivat/api/mobicore/marketplace ", {
+          const res = await axios.get("https://dev.mobivat.com/mobitax-vsdc/mobivat/api/mobicore/marketplace", {
             headers: {
               'Authorization': 'Basic bW9iaXZhdDoxMjM0'
             },
             // params: { qrcodeString:qrcodeString[0]},
           });
-          setResponse(res.data);
+          setResponse(res.data.data);
           setResponseError(res.data);
   
           const statusCode =responseError.responseCode;
@@ -342,7 +342,7 @@ export default function CategoryManager() {
 
 {
     //`url(assets/images/m-2.jpg)`
-data.map((category,index)=>{
+    response?.map((category,index)=>{
    const imageURL="url("+category.image+")";
         console.log("Product Name:"+category.name);
 return(
