@@ -9,6 +9,9 @@ import Client_Info from "./components/MerchantScanner/Client_Info";
 import NotificationSoundManager from "./components/Notifications/NotificationSoundManager";
 import CategoryManager from "./components/Marketplace/CategoryManager";
 import CategoryPage from "./components/Marketplace/CategoryPage";
+import VoucherDataFilter from "./components/Marketplace/VoucherDataFilter";
+import Vouchers from "./components/Marketplace/Vouchers";
+import VoucherSearchBar from "./components/Marketplace/VoucherSearchBar";
 
 function App() {
   return (
@@ -26,6 +29,9 @@ function App() {
         <Route path="/test_sound" element={<NotificationSoundManager/>}></Route>
         <Route path="/categoryManager" element={<CategoryManager/>}></Route>
         <Route path="/category" element={<CategoryPage/>}></Route>
+        <Route path="/voucherDataFilter" element={<VoucherDataFilter/>}></Route>
+        <Route path="/vouchers" element={<Vouchers/>}></Route>
+        <Route path="/voucherSearchBar" element={<VoucherSearchBar/>}></Route>
         
         {
         /*<Route path="/signin" element={<SigninPage />}></Route>

@@ -618,7 +618,7 @@ export default function HomePage() {
                     <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
                       <div class="col-sm-8 col-md-6 col-lg-5">
                         <div class="bg-light shadow-sm-0 rounded p-0  text-center">
-                          <Link to="#">
+                          <Link to="/vouchers">
                             <Card elevation={5}>
                               <span class="d-block text-10 text-primary mt-1 mb-1">
                                 <i>
