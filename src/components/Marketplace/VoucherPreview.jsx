@@ -1,7 +1,8 @@
 import React, { useState, useRef,useEffect } from "react";
-import { qrcodeString} from './MobiswiftScanner';
+import { qrcodeString} from './Vouchers';
 import { QRCode } from 'react-qrcode-logo';
 import axios from 'axios';
+import { Buffer } from 'buffer';
 
 import {
   Container,
@@ -30,25 +31,61 @@ import mtnImage from "../../images/icon_images/Untitled-2.jpg";
 
 
 
-function Client_Info() {
+function VoucherPreview() {
 
   const navigate = useNavigate();
   const classes = useStyles();
   const qrRef = useRef(null);
   
+  //const usernamePasswordBuffer = Buffer.from(adminUsername + ':' + adminPassword);
+  const usernamePasswordBuffer = Buffer.from('mobivat' + ':' + '1234');
+  const base64data = usernamePasswordBuffer.toString('base64');
 
     const [response, setResponse] = useState(null);
     const [responseError, setResponseError] = useState(null);
 
     //const [img , setImg]=useState("https://testbox.mobicash.rw/CoreBank/test_box/api/images/content/GSDFJbFJUbjq1BONPjIrwxjMCUya5ig6qmMgS4fVYov9djHX30sdir02qhj0NRMy_265x190.png");
+    
+    
     const fetchQuotes = async () => {
       try {
-        const res = await axios.get("https://dev.mobivat.com/mobicore/mobivat/api/emvqr/decoder?", {
-          headers: {
-            'Authorization': 'Basic bW9iaXZhdDoxMjM0'
-          },
-          params: { qrcodeString:qrcodeString[0]},
-        });
+        const res = await axios.get('https://dev.mobivat.com/mobitax-vsdc/mobivat/api/mobicore/vouchers/preview-redeem', { params: {
+          voucherToken: '7230277309355806',
+          voucherRedeemerId: '400401665710193'
+        },
+        headers: {
+
+          'Authorization': 'Basic ${base64data}',
+          // 'Authorization': 'Basic bW9iaXZhdDoxMjM0',
+          
+          // "Accept":"application/json",
+          // "Content-Type": "application/json",
+        }
+      })
+        // .then(response => response.status)
+        // .catch(err => console.warn(err));
+      // {
+      //   // specify query parameters
+      //   params: {
+      //     voucherToken: '7230277309355806',
+      //     voucherRedeemerId: '400401665710193'
+      //   },
+      //   // specify api basic authorization
+      //   headers: {
+
+      //     'Authorization': 'Basic ${base64data}',
+      //     // 'Authorization': 'Basic bW9iaXZhdDoxMjM0',
+          
+      //     "Accept":"application/json",
+      //     "Content-Type": "application/json",
+      //   },
+      //   // specify api authroization status
+      //   withCredentials: true,
+      //   // auth: {
+      //   //   username:"mobivat",
+      //   //   password:"1234"
+      //   //   }
+      // })
         setResponse(res.data.data);
         setResponseError(res.data);
 
@@ -71,8 +108,7 @@ function Client_Info() {
       // Trigger the API Call
       fetchQuotes();
     }, []);
-  
-   
+    console.log(response);
 
   return (
     <div>
@@ -297,4 +333,4 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: 20,
   },
 }));
-export default Client_Info;
+export default VoucherPreview;

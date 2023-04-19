@@ -12,6 +12,7 @@ import CategoryPage from "./components/Marketplace/CategoryPage";
 import VoucherDataFilter from "./components/Marketplace/VoucherDataFilter";
 import Vouchers from "./components/Marketplace/Vouchers";
 import VoucherSearchBar from "./components/Marketplace/VoucherSearchBar";
+import VoucherPreview from "./components/Marketplace/VoucherPreview";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="/voucherDataFilter" element={<VoucherDataFilter/>}></Route>
         <Route path="/vouchers" element={<Vouchers/>}></Route>
         <Route path="/voucherSearchBar" element={<VoucherSearchBar/>}></Route>
+        <Route path="/voucherPreview" element={<VoucherPreview/>}></Route>
         
         {
         /*<Route path="/signin" element={<SigninPage />}></Route>

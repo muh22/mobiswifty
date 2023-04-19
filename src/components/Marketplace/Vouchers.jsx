@@ -44,6 +44,7 @@ import mobishuliImage from "../../images/icon_images/mobishuli.png";
 import wasacImage from "../../images/icon_images/wasac.png";
 import CategoryManager from "./CategoryManager";
 import VoucherSearchBar from "./VoucherSearchBar";
+export let qrcodeString=[];
 
 
 //global inline styling
@@ -207,7 +208,7 @@ export default function Vouchers() {
                                 </Link>
                               </div>
                               <div className="transaction-card mb-15">
-                                <Link to="#">
+                                {/* <Link to="#"> */}
                                   <div className="transaction-card-info">
 
                                     <div className="transaction-info-text">
@@ -243,11 +244,13 @@ export default function Vouchers() {
 
 
                                   </div>
-
+                                  
                                   <div className="transaction-info-text" style={{border:"1px solid #ff9900"}}>
-                                     <a href="#" style={{backgroundColor:"#ffffff"}}><span style={{color:"#ff9900"}}>Next</span></a>
+
+                                     <a href="/voucherPreview">Next</a>
                                     </div>
-                                </Link>
+                                   
+                               {/* </Link> */}
                               </div>
 
 
