@@ -298,7 +298,7 @@ export default function CategoryManager() {
       //const [img , setImg]=useState("https://testbox.mobicash.rw/CoreBank/test_box/api/images/content/GSDFJbFJUbjq1BONPjIrwxjMCUya5ig6qmMgS4fVYov9djHX30sdir02qhj0NRMy_265x190.png");
       const fetchQuotes = async () => {
         try {
-          const res = await axios.get("https://dev.mobivat.com/mobitax-vsdc/mobivat/api/mobicore/marketplace", {
+          const res = await axios.get("https://dev.mobivat.com/mobicore/mobivat/api/mobicore/marketplace", {
             headers: {
               'Authorization': 'Basic bW9iaXZhdDoxMjM0'
             },
